@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.landing-page{
+    height: 100vh;
+    background:url(./component/images/landing_bg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-top:150px;
+}
+
+.landing-card{
+    height: 400px;
+    width: 600px !important;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding:100px;
+    
+    
+}
+
+form{
+    color: white;
+    padding-left: 100px;
+}
+
+input{
+    padding: 10px;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+  
+}
