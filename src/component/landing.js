@@ -7,11 +7,9 @@ const Landing = () =>{
     return(
         <div className="landing-page" >
            <div className="container landing-card">
-            <form>
-                <input placeholder="user name" type="text" color="white" />
-                <br/>
+        
+                <input className="user-name" placeholder="user name" type="text" color="white" />
                 <Button variant="primary">Submit</Button>
-            </form>
            </div>
         </div>
     );
