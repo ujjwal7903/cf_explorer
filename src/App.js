@@ -1,17 +1,21 @@
 import React from 'react'
 import './App.css';
-import {BrowserRouter,Route,Switch} from 'react-router-dom';
-import Landing from './component/Landing';
-import Dashboard  from './component/Dashboard';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Landing from './component/landing';
+import Dashboard from './component/dashboard';
 
 const App = () => {
   return (
     <>
-    <Switch>
-      <Route exact path="/" component={Landing} />
-      <Route exact path="/dashboard" component={Dashboard} />
-
-    </Switch>
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/dashboard" component={Dashboard} />
+        {/* <Route exact path="/dashboard" component={() => 
+          <Dashboard  authorized= {false} />}
+        /> */}
+        <Redirect to="/" />
+      </Switch>
     </>
   );
 }
