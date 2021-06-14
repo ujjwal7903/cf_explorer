@@ -79,3 +79,10 @@ h1{
     align-items: center;
     justify-content: center;
 }
+
+.Upsolver{
+    background-image: url(./component/images/upsolver-bg.jpg);  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;   
+}

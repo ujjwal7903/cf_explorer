@@ -11,6 +11,7 @@ const User = () => {
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li><Link className="dropdown-item" to="/">LogOut</Link></li>  
+                <li><Link className="dropdown-item" to="/">Profile</Link></li>  
             </ul>
         </div>
     );

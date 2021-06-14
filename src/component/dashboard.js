@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import Card from './Cards/Card';
 import User from './User';
 import {data} from './CardData';
 
