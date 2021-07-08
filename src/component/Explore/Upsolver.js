@@ -1,21 +1,12 @@
 import { React } from "react";
 import Card from '../Cards/UpsolverCard';
-
-const data = [{"id":"A"},{"id":"B"},{"id":"C"},{"id":"D"},{"id":"E"},{"id":"F"},{"id":"G"},{"id":"H"}];
-
-// https://codeforces.com/api/problemset.problems
-// https://codeforces.com/api/user.status?handle=umang_us&from=1&count=10
-
-// Total wrong problems
-// recent 10 not AC 
-// All not AC
-// A not AC
-// B not AC
-
+import data from '../Data/UpSolverData';
 
 
 
 const Upsolver = () => {
+
+
     return (
         <div className="Upsolver">
             <div className="container">
@@ -27,13 +18,15 @@ const Upsolver = () => {
                    data.map(item =>{
                        return(
                             <div className="col-lg-4 col-md-6 col-sm-12">
-                                <Card  name={"upsolve " + item.id}  />
+                                <Card  name={"upsolve "+item.id} content={item.content}  />
                             </div>
                        );
                    })
                }
-               </div> 
+               </div>
+                
             </div>
+           
         </div>
     );
 }

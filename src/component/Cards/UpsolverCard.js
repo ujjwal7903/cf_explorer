@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import {Link} from 'react-router-dom';
-import UpsolveModal from './UpsolveModal';
+import {Button,Modal} from 'react-bootstrap';
+import UpsolveTable from './UpsolveTable';
 
 
 // Modal not working
@@ -8,15 +9,32 @@ import UpsolveModal from './UpsolveModal';
 
 const Card = (props) => {
 
+    const [show, setShow] = useState(false);
+  
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <>
-        <div className="dash-card"  data-toggle="modal" data-target="#UpsolveModal">
-            <h2 style={{ color: 'white' , textAlign: 'center', padding: '10px'}}>{props.name}</h2>
+        <div className="dash-card"  onClick={handleShow}>
+            <h2 style={{ color: 'white' , textAlign: 'center', padding: '10px' }}>{props.name}</h2>
         </div>
 
-        <div className="modal fade" id="UpsolveModal" tabindex="-1" role="dialog" aria-labelledby="UpsolveModalLabel" aria-hidden="true">
-            <UpsolveModal />
-        </div>
+        
+        <Modal size="lg" aria-labelledby="example-modal-sizes-title-lg" show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Never Give Up! <span style={{color:'crimson'}} >{props.name}</span>  </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+              <UpsolveTable content={props.content} />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+        
         </>
     );
 
