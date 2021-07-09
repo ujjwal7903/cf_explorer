@@ -22,7 +22,7 @@ const UpsolveTable = ({ content }) => {
                        const link = "https://codeforces.com/problemset/problem/" + item.problem.contestId + "/" + item.problem.index;
                             return (
                                 <tr>
-                                    <td>{key}</td>
+                                    <td>{key+1}</td>
                                     <td><a href={link} target="_blanck" >{item.problem.name}</a></td>
                                     <td>{item.problem.rating}</td>
                                     <td>{item.verdict}</td>

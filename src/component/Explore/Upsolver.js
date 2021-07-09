@@ -2,7 +2,7 @@ import { React } from "react";
 import Card from '../Cards/UpsolverCard';
 import data from '../Data/UpSolverData';
 
-
+// to do -- If accepted any time remove it from array
 
 const Upsolver = () => {
 
