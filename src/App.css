@@ -112,3 +112,50 @@ h1{
     background-attachment: fixed;
     background-size: 100% 100%;   
 }
+
+.Recommender{
+    background-image: url(./component/images/random.jpg);  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;   
+}
+
+
+
+.short-card{
+    height: 100px;
+    width: 300px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin: 30px 30px;  
+    cursor: pointer; 
+    transition: 0.3s;
+    letter-spacing: 1px;
+    overflow: hidden;
+    
+}
+
+.short-card:hover{
+    letter-spacing: 4px;
+}
+
+.short-card ::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255,0.15),transparent );
+    transform: skewX(45deg) translateX(0%);
+    transition: 0.4s;
+}
+
+.short-card:hover ::before{
+    transform: skewX(45deg) translateX(300%);
+    
+}

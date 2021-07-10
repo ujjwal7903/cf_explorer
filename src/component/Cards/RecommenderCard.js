@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {Button,Modal} from 'react-bootstrap';
-import UpsolveTable from './UpsolveTable';
+
 
 
 // Modal not working
@@ -15,17 +15,17 @@ const Card = (props) => {
 
     return (
         <>
-        <div className="dash-card"  onClick={handleShow}>
+        <div className="short-card"  onClick={handleShow}>
             <h2 style={{ color: 'white' , textAlign: 'center', padding: '10px' }}>{props.name}</h2>
         </div>
 
         
         <Modal size="lg" aria-labelledby="example-modal-sizes-title-lg" show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Never Give Up! <span style={{color:'crimson'}} >{props.name}</span>  </Modal.Title>
+            <Modal.Title>Accept the Challenge! <span style={{color:'crimson'}} >{props.name}</span>  </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-              <UpsolveTable content={props.content} />
+              <h3>Question</h3>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
