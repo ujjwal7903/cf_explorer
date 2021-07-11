@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Button, Modal } from 'react-bootstrap';
-import UpsolveTable from './UpsolveTable';
+import VirtualTable from './VirtualTable';
 
 
 // Modal not working
@@ -20,13 +20,12 @@ const Card = (props) => {
         <h2 style={{ color: 'white', textAlign: 'center', padding: '10px' }}>{props.name}</h2>
       </div>
 
-
       <Modal size="lg" aria-labelledby="example-modal-sizes-title-lg" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Never Give Up! <span style={{ color: 'crimson' }} >{props.name}</span>  </Modal.Title>
+          <Modal.Title>Let's practice virtual !!! <span style={{ color: 'crimson' }} >{props.name}</span>  </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <UpsolveTable content={props.content} />
+          <VirtualTable content={props.content} />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

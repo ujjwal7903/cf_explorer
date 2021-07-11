@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Table } from 'react-bootstrap';
 
 
-const UpsolveTable = ({ content }) => {
+const VirtualTable = ({ content }) => {
 
     return (
         <div>
@@ -10,22 +10,19 @@ const UpsolveTable = ({ content }) => {
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Problem</th>
-                        <th>Rating</th>
-                        <th>Verdict</th>
+                        <th>Contest</th>
+                        <th>Id</th>
                     </tr>
                 </thead>
                 <tbody>
-
                     {
                         content.map((item, key) => {
-                            const link = "https://codeforces.com/problemset/problem/" + item.problem.contestId + "/" + item.problem.index;
+                            const link = "https://codeforces.com/contest/" + item.id;
                             return (
                                 <tr>
                                     <td>{key+1}</td>
-                                    <td><a href={link} target="_blanck" >{item.problem.name}</a></td>
-                                    <td>{item.problem.rating}</td>
-                                    <td>{item.verdict}</td>
+                                    <td><a href={link} target="_blanck" >{item.name}</a></td>
+                                    <td>{item.id}</td>
                                 </tr>
                             );
                         })
@@ -40,6 +37,6 @@ const UpsolveTable = ({ content }) => {
     );
 }
 
-export default UpsolveTable;
+export default VirtualTable;
 
 
