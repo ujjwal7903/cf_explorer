@@ -3,6 +3,10 @@ import {Link} from 'react-router-dom';
 
 const User = () => {
 
+    const logout = () =>{
+        localStorage.removeItem('user-name');
+    }
+
     const user_name = localStorage.getItem('user-name');
     return (
         <div className="dropdown">
@@ -10,7 +14,7 @@ const User = () => {
                 {user_name}
             </button>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><Link className="dropdown-item" to="/">LogOut</Link></li>  
+                <li><Link onClick={()=>logout()} className="dropdown-item" to="/">LogOut</Link></li>  
                 <li><Link className="dropdown-item" to="/">Profile</Link></li>  
             </ul>
         </div>

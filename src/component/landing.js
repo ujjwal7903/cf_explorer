@@ -9,7 +9,7 @@ const Landing = () =>{
     useEffect(()=>{
         if(localStorage.getItem('user-name'))
         {
-       //     history.push("/dashboard");
+            history.push("/dashboard");
         }
     },[]);
 

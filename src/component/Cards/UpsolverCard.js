@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Button, Modal } from 'react-bootstrap';
+=======
+import {Button,Modal} from 'react-bootstrap';
+>>>>>>> 51a5356ee73d01993d976a0b93b2ebc71e829b40
 import UpsolveTable from './UpsolveTable';
 
 

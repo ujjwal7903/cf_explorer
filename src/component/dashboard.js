@@ -1,13 +1,13 @@
 import React from 'react';
 import Card from './Cards/Card';
 import User from './User';
-import {data} from './CardData';
+import {data} from './Data/CardData';
 
 const Dashboard = () =>{
 
     return(
         <div className="dashboard">
-            <User/>
+            <User />
             <div className="container">
             <h1 style={{pading:'20px 20px', textAlign: 'center'}}>CODE LIKE BEAST</h1>
             <div className="row">
