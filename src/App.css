@@ -24,6 +24,15 @@
     padding:100px;
 }
 
+.td_style{
+    text-decoration: none;
+    color: lightgreen;
+    font-weight: bold;
+}
+.td_style:hover{
+    color: crimson;
+}
+
 ::placeholder {
     color: white;
     opacity: 1; /* Firefox */
@@ -119,6 +128,11 @@
     
 }
 /* Responsiveness starts here */
+@media screen and (max-width: 1200px) {
+    .small-dash-card{
+        width: 19rem;
+    }
+}
 @media screen and (max-width: 868px) {
     .small-dash-card{
         width: 20rem;

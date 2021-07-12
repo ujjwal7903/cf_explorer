@@ -22,7 +22,7 @@ const Card = (props) => {
 
       <Modal size="lg" aria-labelledby="example-modal-sizes-title-lg" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Let's practice virtual !!! <span style={{ color: 'crimson' }} >{props.name}</span>  </Modal.Title>
+          <Modal.Title>Let's practice virtually !!! <span style={{ color: 'crimson' }} >{props.name}</span>  </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <VirtualTable content={props.content} />

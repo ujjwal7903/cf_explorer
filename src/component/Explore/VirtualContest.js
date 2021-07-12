@@ -15,7 +15,7 @@ const VirtualContest = () => {
                             data.map(item => {
                                 return (
                                     <div className="col-lg-4 col-md-6 col-sm-12">
-                                        <Card name={ item.id} content={item.content} />
+                                        <Card name={item.id} content={item.content} />
                                     </div>
                                 );
                             })
