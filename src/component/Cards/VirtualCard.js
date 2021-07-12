@@ -16,8 +16,8 @@ const Card = (props) => {
 
   return (
     <>
-      <div className="dash-card" onClick={handleShow}>
-        <h2 style={{ color: 'white', textAlign: 'center', padding: '10px' }}>{props.name}</h2>
+      <div className="small-dash-card" onClick={handleShow}>
+        <h2 style={{ color: 'white', textAlign: 'center', padding: '1rem' }}>{props.name}</h2>
       </div>
 
       <Modal size="lg" aria-labelledby="example-modal-sizes-title-lg" show={show} onHide={handleClose}>
