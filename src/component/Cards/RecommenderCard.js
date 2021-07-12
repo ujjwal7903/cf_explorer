@@ -15,7 +15,7 @@ const Card = (props) => {
 
     return (
         <>
-        <div className="short-card"  onClick={handleShow}>
+        <div className="small-dash-card"  onClick={handleShow}>
             <h2 style={{ color: 'white' , textAlign: 'center', padding: '10px' }}>{props.name}</h2>
         </div>
 

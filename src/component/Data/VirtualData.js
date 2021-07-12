@@ -23,7 +23,7 @@ fetch("https://codeforces.com/api/contest.list")
     .then(data => {
         
         data.result.forEach(contestData => { 
-            if(contestData.phase == "FINISHED"){
+            if(contestData.phase === "FINISHED"){
                 allc.push(contestData);
 
                 var snm=contestData.name.substring(23,29);

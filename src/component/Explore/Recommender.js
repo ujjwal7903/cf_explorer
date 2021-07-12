@@ -10,6 +10,9 @@ import Card from '../Cards/RecommenderCard';
 
 
 const Recommender = () => {
+
+ //   console.log(dataName);
+    
     return (
         <div className="Recommender">
              <div className="container">
@@ -32,7 +35,7 @@ const Recommender = () => {
                      dataName.map(item =>{
                         return(
                              <div className="col-lg-4 col-md-6 col-sm-12">
-                                 <Card  name={item}   />
+                                 <Card  name={item.id}   />
                              </div>
                         );
                     })
@@ -43,7 +46,7 @@ const Recommender = () => {
                      dataRating.map(item =>{
                         return(
                              <div className="col-lg-4 col-md-6 col-sm-12">
-                                 <Card  name={item}   />
+                                 <Card  name={item.id}   />
                              </div>
                         );
                     })

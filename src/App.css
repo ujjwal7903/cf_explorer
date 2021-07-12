@@ -195,8 +195,15 @@ h1{
     background-size: 100% 100%;   
 }
 
+.Recommender{
+    background-image: url(./component/images/random.jpg);  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;   
+}
+
 .virtualContest{
-    background-image: url(./component/images/upsolver-bg.jpg);  
+    background-image: url(./component/images/virtual.jpg);  
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;   
