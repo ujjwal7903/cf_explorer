@@ -9,7 +9,7 @@
 
 ///need to fetch all problems  -- seperate
 
-const dataRecommend = ["Recommend me"];
+const dataRecommend = [];
 const dataName = [];
 const dataRating = [];
 
@@ -55,7 +55,7 @@ const solvedProblems = new Set();
 const handle = localStorage.getItem('user-name');
 
 // solved problems from status
-fetch("https://codeforces.com/api/user.status?handle=" + handle)
+ fetch("https://codeforces.com/api/user.status?handle=" + handle)
     .then(response => response.json())
     .then(data => {
       //  console.log(data);
@@ -104,6 +104,7 @@ fetch("https://codeforces.com/api/user.status?handle=" + handle)
                     if(item.index==="G") G.push(item);
                     if(item.index==="H") H.push(item);
 
+                   // console.log(item.rating);
                     if(item.rating==="800") R800.push(item);
                     if(item.rating==="900") R900.push(item);
                     if(item.rating==="1000") R1000.push(item);
@@ -143,6 +144,7 @@ fetch("https://codeforces.com/api/user.status?handle=" + handle)
     }).catch(err=>{
         console.log(err);
     })
+    
 
     dataName.push({id:"A",content:A});
     dataName.push({id:"B",content:B});
@@ -179,6 +181,12 @@ fetch("https://codeforces.com/api/user.status?handle=" + handle)
     dataRating.push({id:"3100",content:R3100});
     dataRating.push({id:"3200",content:R3200});
 
+    const Question = A;  //  fetch user rating and give according to it
+
+    
+    dataRecommend.push({id:"Recommend",content:Question});
+
+    
 
     // Give a random Question data from here rather of passing whole data
 

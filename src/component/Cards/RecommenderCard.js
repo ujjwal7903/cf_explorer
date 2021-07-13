@@ -13,6 +13,8 @@ const Card = (props) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+ //   console.log(props.content);
+
     return (
         <>
         <div className="small-dash-card"  onClick={handleShow}>

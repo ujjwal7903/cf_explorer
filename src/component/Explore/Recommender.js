@@ -24,7 +24,7 @@ const Recommender = () => {
                      dataRecommend.map(item =>{
                         return(
                              <div className="col-lg-4 col-md-6 col-sm-12">
-                                 <Card  name={item}   />
+                                 <Card  name={item.id}  content={item.content} />
                              </div>
                         );
                     })
@@ -35,7 +35,7 @@ const Recommender = () => {
                      dataName.map(item =>{
                         return(
                              <div className="col-lg-4 col-md-6 col-sm-12">
-                                 <Card  name={item.id}   />
+                                 <Card  name={item.id} content={item.content}  />
                              </div>
                         );
                     })
@@ -46,7 +46,7 @@ const Recommender = () => {
                      dataRating.map(item =>{
                         return(
                              <div className="col-lg-4 col-md-6 col-sm-12">
-                                 <Card  name={item.id}   />
+                                 <Card  name={item.id} content={item.content}   />
                              </div>
                         );
                     })
