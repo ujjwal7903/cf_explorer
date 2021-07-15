@@ -1,4 +1,4 @@
-
+import solvedProblems from "./SolvedData";
 // fetch problems with rating more than user rating unsolved
 // fetch A unsolved , B unsolved ....
 // fetch 1500 unsolved ....
@@ -49,39 +49,6 @@ const R3100 = [];
 const R3200 = [];
 
 
-
-const solvedProblems = new Set();
-
-const handle = localStorage.getItem('user-name');
-
-// solved problems from status
- fetch("https://codeforces.com/api/user.status?handle=" + handle)
-    .then(response => response.json())
-    .then(data => {
-      //  console.log(data);
-        if(data.status ==="OK")
-        {
-            data.result.map(item=>{
-                
-                const str = `${item.problem.contestId}${item.problem.index}`;     // 1512A
-                str.toString();
-            
-                if(item.verdict==="OK")
-                {
-                    solvedProblems.add(str);
-                }
-            })
-        }
-        else
-        {
-            alert("something went wrong check your handle");
-        }
-
-    }).catch(err => {
-        console.log(err);
-    })
-
-
     fetch(" https://codeforces.com/api/problemset.problems")
     .then(response=>response.json())
     .then(data=>{
@@ -96,40 +63,40 @@ const handle = localStorage.getItem('user-name');
                 if(!solvedProblems.has(str))
                 {
                     if(item.index==="A") A.push(item);
-                    if(item.index==="B") B.push(item);
-                    if(item.index==="C") C.push(item);
-                    if(item.index==="D") D.push(item);
-                    if(item.index==="E") E.push(item);
-                    if(item.index==="F") F.push(item);
-                    if(item.index==="G") G.push(item);
-                    if(item.index==="H") H.push(item);
+                    else if(item.index==="B") B.push(item);
+                    else if(item.index==="C") C.push(item);
+                    else if(item.index==="D") D.push(item);
+                    else if(item.index==="E") E.push(item);
+                    else if(item.index==="F") F.push(item);
+                    else if(item.index==="G") G.push(item);
+                    else if(item.index==="H") H.push(item);
 
                    // console.log(item.rating);
-                    if(item.rating==="800") R800.push(item);
-                    if(item.rating==="900") R900.push(item);
-                    if(item.rating==="1000") R1000.push(item);
-                    if(item.rating==="1100") R1100.push(item);
-                    if(item.rating==="1200") R1200.push(item);
-                    if(item.rating==="1300") R1300.push(item);
-                    if(item.rating==="1400") R1400.push(item);
-                    if(item.rating==="1500") R1500.push(item);
-                    if(item.rating==="1600") R1600.push(item);
-                    if(item.rating==="1700") R1700.push(item);
-                    if(item.rating==="1800") R1800.push(item);
-                    if(item.rating==="1900") R1900.push(item);
-                    if(item.rating==="2000") R2000.push(item);
-                    if(item.rating==="2100") R2100.push(item);
-                    if(item.rating==="2200") R2200.push(item);
-                    if(item.rating==="2300") R2300.push(item);
-                    if(item.rating==="2400") R2400.push(item);
-                    if(item.rating==="2500") R2500.push(item);
-                    if(item.rating==="2600") R2600.push(item);
-                    if(item.rating==="2700") R2700.push(item);
-                    if(item.rating==="2800") R2800.push(item);
-                    if(item.rating==="2900") R2900.push(item);
-                    if(item.rating==="3000") R3000.push(item);
-                    if(item.rating==="3100") R3100.push(item);
-                    if(item.rating==="3200") R3200.push(item);
+                    if(item.rating===800) R800.push(item);
+                    else if(item.rating==="900") R900.push(item);
+                    else if(item.rating==="1000") R1000.push(item);
+                    else if(item.rating==="1100") R1100.push(item);
+                    else if(item.rating==="1200") R1200.push(item);
+                    else if(item.rating==="1300") R1300.push(item);
+                    else if(item.rating==="1400") R1400.push(item);
+                    else if(item.rating==="1500") R1500.push(item);
+                    else if(item.rating==="1600") R1600.push(item);
+                    else if(item.rating==="1700") R1700.push(item);
+                    else if(item.rating==="1800") R1800.push(item);
+                    else if(item.rating==="1900") R1900.push(item);
+                    else if(item.rating==="2000") R2000.push(item);
+                    else if(item.rating==="2100") R2100.push(item);
+                    else if(item.rating==="2200") R2200.push(item);
+                    else if(item.rating==="2300") R2300.push(item);
+                    else if(item.rating==="2400") R2400.push(item);
+                    else if(item.rating==="2500") R2500.push(item);
+                    else if(item.rating==="2600") R2600.push(item);
+                    else if(item.rating==="2700") R2700.push(item);
+                    else if(item.rating==="2800") R2800.push(item);
+                    else if(item.rating==="2900") R2900.push(item);
+                    else if(item.rating==="3000") R3000.push(item);
+                    else if(item.rating==="3100") R3100.push(item);
+                    else if(item.rating==="3200") R3200.push(item);
                     
 
 
@@ -144,7 +111,7 @@ const handle = localStorage.getItem('user-name');
     }).catch(err=>{
         console.log(err);
     })
-    
+
 
     dataName.push({id:"A",content:A});
     dataName.push({id:"B",content:B});

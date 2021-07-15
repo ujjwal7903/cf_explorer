@@ -9,10 +9,11 @@ const UpsolveTable = ({ content }) => {
             <Table striped bordered hover variant="dark">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Problem</th>
-                        <th>Rating</th>
-                        <th>Verdict</th>
+                        <th style={{ textAlign: 'center' }}>#</th>
+                        <th style={{ textAlign: 'center' }}>Problem</th>
+                        <th style={{ textAlign: 'center' }}>Redirect</th>
+                        <th style={{ textAlign: 'center' }}>Rating</th>
+                        <th style={{ textAlign: 'center' }}>Verdict</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -22,10 +23,11 @@ const UpsolveTable = ({ content }) => {
                             const link = "https://codeforces.com/problemset/problem/" + item.problem.contestId + "/" + item.problem.index;
                             return (
                                 <tr>
-                                    <td>{key+1}</td>
-                                    <td><a href={link} target="_blanck" >{item.problem.name}</a></td>
-                                    <td>{item.problem.rating}</td>
-                                    <td>{item.verdict}</td>
+                                    <td style={{ textAlign: 'center' }}>{key+1}</td>
+                                    <td>{item.problem.name}</td>
+                                    <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">VISIT</a></td>
+                                    <td style={{ textAlign: 'center' }} className="td_style">{item.problem.rating}</td>
+                                    <td style={{ textAlign: 'center' }} className="td_style">{item.verdict}</td>
                                 </tr>
                             );
                         })

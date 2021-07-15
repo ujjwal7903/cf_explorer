@@ -6,18 +6,18 @@ export const data = [
     },
     {
         "_id":"2",
-        "name":"Compare",
-        "link":"/Compare"
+        "name":"Upsolver",
+        "link":"/Upsolver"
     },
     {
         "_id":"3",
-        "name":"Ladder",
-        "link":"/Ladder"
+        "name":"Recommender",
+        "link":"/Recommender"
     },
     {
         "_id":"4",
-        "name":"Upsolver",
-        "link":"/Upsolver"
+        "name":"Compare",
+        "link":"/Compare"
     },
     {
         "_id":"5",
@@ -26,7 +26,7 @@ export const data = [
     },
     {
         "_id":"6",
-        "name":"Recommender",
-        "link":"/Recommender"
+        "name":"Ladder",
+        "link":"/Ladder"
     } 
  ];
