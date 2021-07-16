@@ -8,8 +8,8 @@ const Dashboard = () =>{
     return(
         <div className="dashboard">
             <User />
-            <div className="container">
-            <h1 style={{pading:'20px 20px', textAlign: 'center'}}>CODE LIKE BEAST</h1>
+            <div className="container" >
+            <h1 style={{textAlign: 'center'}}>CODE LIKE BEAST</h1>
             <div className="row">
                {
                    data.map(item =>{

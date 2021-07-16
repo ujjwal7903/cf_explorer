@@ -34,9 +34,24 @@ const VirtualTable = ({ content }) => {
                             const vh = "" + item.id + "H";
 
                             var xx = "";
-                            if(solvedProblems.has(va) || solvedProblems.has(vb) || solvedProblems.has(vc) || solvedProblems.has(vd))  xx="YES";
-                            else if(solvedProblems.has(ve) || solvedProblems.has(vf) || solvedProblems.has(vg) || solvedProblems.has(vh))  xx="YES";
-                            else    xx="NO";
+                            var YNcolor='green';
+
+
+                            if(solvedProblems.has(va) || solvedProblems.has(vb) || solvedProblems.has(vc) || solvedProblems.has(vd)) 
+                            {  
+                                 xx="YES";
+                                YNcolor='green';
+                            }
+                            else if(solvedProblems.has(ve) || solvedProblems.has(vf) || solvedProblems.has(vg) || solvedProblems.has(vh))
+                            {
+                                xx="YES";
+                                YNcolor='green';
+                            }
+                            else
+                            {
+                                xx="NO";
+                                YNcolor='red';
+                            }
                             
                             return (
                                 <tr>
@@ -44,7 +59,7 @@ const VirtualTable = ({ content }) => {
                                     <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" style={{textDecoration: 'none', color: 'white'}}>{item.name}</a></td>
                                     <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">VISIT</a></td>
                                     <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">{item.id}</a></td>
-                                    <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">{xx}</a></td>
+                                    <td style={{ textAlign: 'center' }}><div style={{ backgroundColor:YNcolor}} ><a href={link} target="_blanck" style={{color:'white'}} className="td_style">{xx}</a></div></td>
                                 </tr>
                             );
                         })

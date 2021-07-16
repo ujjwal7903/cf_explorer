@@ -23,8 +23,15 @@ const LadderTable = ({ content }) => {
                             const link = "https://codeforces.com/problemset/problem/" + item.contestId + "/" + item.index;
                             const val = "" + item.contestId + item.index;
                             var xx = "";
-                            if(solvedProblems.has(val)) xx="YES";
-                            else    xx="NO";
+                            var YNcolor='green';
+                            if(solvedProblems.has(val)) {
+                                xx="YES";
+                                YNcolor='green';
+                            }
+                            else{
+                                xx="NO";
+                                YNcolor='red';
+                            }    
                             const pId = "" + item.contestId + item.index;     // problem Id
                             return (
                                 <tr>
@@ -32,7 +39,7 @@ const LadderTable = ({ content }) => {
                                     <td><a href={link} target="_blanck" style={{textDecoration: 'none', color: 'white'}}>{item.name}</a></td>
                                     <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">VISIT</a></td>
                                     <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">{pId}</a></td>
-                                    <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">{xx}</a></td>
+                                    <td style={{ textAlign: 'center'}}><div style={{backgroundColor:YNcolor}}><a href={link} target="_blanck" style={{color:'white'}} className="td_style">{xx}</a></div> </td>
                                 </tr>
                             );
                         })

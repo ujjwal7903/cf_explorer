@@ -3,20 +3,46 @@
     padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+h1{
+    font-family: 'Tourney', cursive;
+}
+
+h2{
+    font-family: 'Righteous', cursive;
+}
+
+.user-btn{
+    position: absolute;
+    margin-left: 96rem;
+    margin-top: 2.5rem;
+    height: 4rem;
+    width: 10rem;
+    background-color: rgb(12, 243, 231) !important;
+    font-family: 'Righteous', cursive;
+    color: black !important;
+    
+}
+
 .landing-page{
-    background:url(./component/images/landing_bg.jpg);
+    background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(178, 12, 255));
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
     height: 100vh;
-    padding-top:150px;
+    padding-top:100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .landing-card{
     height: 400px;
     width: 600px !important;
     background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba(135, 31, 31, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(34, 31, 31, 0.37);
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
@@ -45,9 +71,7 @@
     border-radius: 10px;
     background: transparent;
     color: white;
-    width: 300px;
-    margin-left: 120px;
-    margin-top: 50px;
+    width: 400px;
     border:6px solid #fde7eb;
 }
 
@@ -55,7 +79,7 @@
     height: 20rem;
     width: 20rem;
     background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 0.8rem 2.4rem 0 rgba(135, 31, 31, 0.37);
+    box-shadow: 0 0.8rem 2.4rem 0 rgba(36, 31, 31, 0.37);
     backdrop-filter: blur( 0.4rem );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 2.5rem;
@@ -94,7 +118,7 @@
     height: 8rem;
     width: 24rem;
     background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 0.8rem 2.4rem 0 rgba(135, 31, 31, 0.37);
+    box-shadow: 0 0.8rem 2.4rem 0 rgba(37, 34, 34, 0.37);
     backdrop-filter: blur( 0.4rem );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 2rem;
@@ -177,16 +201,19 @@
 
 /* small Dash Card ends here */
 .dashboard{
-    background-image: url(./component/images/dash-bg.jpg);  
+    background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(60, 255, 1)); 
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;   
+    background-attachment:fixed;
+    background-size: 100% 100%;  
+    height: 100vh;
+
 }
 
 h1{
     color: white;
     font-size:xx-large;
     font-weight: bolder;
+    padding: 30px 30px;
 }
 
 .user{
@@ -203,28 +230,29 @@ h1{
 }
 
 .Upsolver{
-    background-image: url(./component/images/upsolver-bg.jpg);  
+    background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(250, 81, 118)); 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;   
 }
 
 .Recommender{
-    background-image: url(./component/images/random.jpg);  
+    background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(245, 112, 4)); 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;   
 }
 
 .virtualContest{
-    background-image: url(./component/images/virtual.jpg);  
+    background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(245, 112, 4)); 
+
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;   
 }
 
 .Ladder{
-    background-image: url(./component/images/virtual.jpg);  
+    background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(4, 245, 173));   
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;   

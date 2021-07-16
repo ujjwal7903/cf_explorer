@@ -45,7 +45,9 @@ const Landing = () =>{
     }
 
     return(
-        <div className="landing-page" >
+        <div className="landing-page fluid-container" >
+            <h1>Welcome To CF_explorer</h1>
+            <h2>Explore the Tools! <span style={{color:'InfoBackground'}}> Enjoy the Game :)</span> </h2>
            <div className="container landing-card">
                 <input 
                     className="user-name" 
@@ -55,8 +57,8 @@ const Landing = () =>{
                 />
                 <br />
                 <button 
-                    className="btn btn-primary"
-                    style={{marginLeft:'250px',marginTop:'20px'}}
+                    className="btn btn-dark"
+                    style={{marginTop:'40px',width:'200px',height:'40px',fontSize:'20px'}}
                     onClick={login}    
                 >
                 Submit
