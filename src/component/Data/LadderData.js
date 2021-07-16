@@ -32,62 +32,59 @@ fetch(" https://codeforces.com/api/problemset.problems")
     .then(data => {
         if (data.status === "OK") {
             data.result.problems.map(item => {
-                switch(item.rating) {
-                    case 800:
-                        if(r800.length < 100)   r800.push(item);
-                    case 900:
-                        if(r900.length < 100)   r900.push(item);
-                    case 1000:
-                        if(r1000.length < 100)   r1000.push(item);
-                    case 1100:
-                        if(r1100.length < 100)   r1100.push(item);
-                    case 1200:
-                        if(r1200.length < 100)   r1200.push(item);
-                    case 1300:
-                        if(r1300.length < 100)   r1300.push(item);
-                    case 1400:
-                        if(r1400.length < 100)   r1400.push(item);
-                    case 1500:
-                        if(r1500.length < 100)   r1500.push(item);
-                    case 1600:
-                        if(r1600.length < 100)   r1600.push(item);
-                    case 1700:
-                        if(r1700.length < 100)   r1700.push(item);
-                    case 1800:
-                        if(r1800.length < 100)   r1800.push(item);
-                    case 1900:
-                        if(r1900.length < 100)   r1900.push(item);
-                    case 2000:
-                        if(r2000.length < 100)   r2000.push(item);
-                    case 2100:
-                        if(r2100.length < 100)   r2100.push(item);
-                    case 2200:
-                        if(r2200.length < 100)   r2200.push(item);
-                    case 2300:
-                        if(r2300.length < 100)   r2300.push(item);
-                    case 2400:
-                        if(r2400.length < 100)   r2400.push(item);
-                    case 2500:
-                        if(r2500.length < 100)   r2500.push(item);
-                    case 2600:
-                        if(r2600.length < 100)   r2600.push(item);
-                    case 2700:
-                        if(r2700.length < 100)   r2700.push(item);
-                    case 2800:
-                        if(r2800.length < 100)   r2800.push(item);
-                    case 2900:
-                        if(r2900.length < 100)   r2900.push(item);
-                    case 3000:
-                        if(r3000.length < 100)   r3000.push(item);
-                    case 3100:
-                        if(r3100.length < 100)   r3100.push(item);
-                    case 3200:
-                        if(r3200.length < 100)   r3200.push(item);
-                    default:
-                        extra.push(item);
+                if(item.rating===800){
+                    if(r800.length < 100)   r800.push(item);
+                }else if(item.rating===900){
+                    if(r900.length < 100)   r900.push(item);
+                }else if(item.rating===1000){
+                    if(r1000.length < 100)   r1000.push(item);
+                }else if(item.rating===1100){
+                    if(r1100.length < 100)   r1100.push(item);
+                }else if(item.rating===1200){
+                    if(r1200.length < 100)   r1200.push(item);
+                }else if(item.rating===1300){
+                    if(r1300.length < 100)   r1300.push(item);
+                }else if(item.rating===1400){
+                    if(r1400.length < 100)   r1400.push(item);
+                }else if(item.rating===1500){
+                    if(r1500.length < 100)   r1500.push(item);
+                }else if(item.rating===1600){
+                    if(r1600.length < 100)   r1600.push(item);
+                }else if(item.rating===1700){
+                    if(r1700.length < 100)   r1700.push(item);
+                }else if(item.rating===1800){
+                    if(r1800.length < 100)   r1800.push(item);
+                }else if(item.rating===1900){
+                    if(r1900.length < 100)   r1900.push(item);
+                }else if(item.rating===2000){
+                    if(r2000.length < 100)   r2000.push(item);
+                }else if(item.rating===2100){
+                    if(r2100.length < 100)   r2100.push(item);
+                }else if(item.rating===2200){
+                    if(r2200.length < 100)   r2200.push(item);
+                }else if(item.rating===2300){
+                    if(r2300.length < 100)   r2300.push(item);
+                }else if(item.rating===2400){
+                    if(r2400.length < 100)   r2400.push(item);
+                }else if(item.rating===2500){
+                    if(r2500.length < 100)   r2500.push(item);
+                }else if(item.rating===2600){
+                    if(r2600.length < 100)   r2600.push(item);
+                }else if(item.rating===2700){
+                    if(r2700.length < 100)   r2700.push(item);
+                }else if(item.rating===2800){
+                    if(r2800.length < 100)   r2800.push(item);
+                }else if(item.rating===2900){
+                    if(r2900.length < 100)   r2900.push(item);
+                }else if(item.rating===3000){
+                    if(r3000.length < 100)   r3000.push(item);
+                }else if(item.rating===3100){
+                    if(r3100.length < 100)   r3100.push(item);
+                }else if(item.rating===3200){
+                    if(r3200.length < 100)   r3200.push(item);
+                }else{
+                    if(extra.length < 100)   extra.push(item);
                 }
-
-
             });
         }
         else {

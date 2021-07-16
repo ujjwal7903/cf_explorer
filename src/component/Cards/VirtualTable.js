@@ -41,10 +41,10 @@ const VirtualTable = ({ content }) => {
                             return (
                                 <tr>
                                     <td style={{ textAlign: 'center' }}>{key + 1}</td>
-                                    <td style={{ textAlign: 'center' }}>{item.name}</td>
+                                    <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" style={{textDecoration: 'none', color: 'white'}}>{item.name}</a></td>
                                     <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">VISIT</a></td>
                                     <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">{item.id}</a></td>
-                                    <td style={{ textAlign: 'center' }} className="td_style">{xx}</td>
+                                    <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">{xx}</a></td>
                                 </tr>
                             );
                         })

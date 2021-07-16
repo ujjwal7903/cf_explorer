@@ -14,7 +14,6 @@ const LadderTable = ({ content }) => {
                         <th style={{ textAlign: 'center' }}>Problems</th>
                         <th style={{ textAlign: 'center' }}>Redirect</th>
                         <th style={{ textAlign: 'center' }}>ID</th>
-                        <th style={{ textAlign: 'center' }}>Index</th>
                         <th style={{ textAlign: 'center' }}>Solved (Y/N)</th>
                     </tr>
                 </thead>
@@ -26,14 +25,14 @@ const LadderTable = ({ content }) => {
                             var xx = "";
                             if(solvedProblems.has(val)) xx="YES";
                             else    xx="NO";
+                            const pId = "" + item.contestId + item.index;     // problem Id
                             return (
                                 <tr>
                                     <td style={{ textAlign: 'center' }}>{key + 1}</td>
-                                    <td>{item.name}</td>
+                                    <td><a href={link} target="_blanck" style={{textDecoration: 'none', color: 'white'}}>{item.name}</a></td>
                                     <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">VISIT</a></td>
-                                    <td style={{ textAlign: 'center' }} className="td_style">{item.contestId}</td>
-                                    <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">{item.index}</a></td>
-                                    <td style={{ textAlign: 'center' }} className="td_style">{xx}</td>
+                                    <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">{pId}</a></td>
+                                    <td style={{ textAlign: 'center' }}><a href={link} target="_blanck" className="td_style">{xx}</a></td>
                                 </tr>
                             );
                         })
