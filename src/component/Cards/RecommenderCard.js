@@ -13,7 +13,7 @@ const Card = (props) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
- //   console.log(props.content);
+    console.log(props.content);
 
     return (
         <>
@@ -27,7 +27,18 @@ const Card = (props) => {
             <Modal.Title>Accept the Challenge! <span style={{color:'crimson'}} >{props.name}</span>  </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-              <h3>Question</h3>
+              <div className="container">
+                <div style={{display:'flex'}}>
+                  <h2> {" "+props.content.index} </h2>
+                  <h2> <span style={{color:'crimson'}} > {" "+props.content.name}</span></h2>
+                </div>
+                <button 
+                    className="btn btn-dark"
+                    style={{marginTop:'40px',width:'200px',height:'40px',fontSize:'20px'}}
+                >
+                Accept Challenge
+                </button>
+              </div>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>

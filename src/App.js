@@ -10,6 +10,8 @@ import Ladder from './component/Explore/Ladder';
 import Recommender from './component/Explore/Recommender';
 import Upsolver from './component/Explore/Upsolver';
 import Vizualizer from './component/Explore/Vizualizer';
+import Temporary from './component/Explore/Temporary';
+
 
 const App = () => {
   return (
@@ -23,6 +25,7 @@ const App = () => {
         <Route exact path="/Recommender" component={Recommender} />
         <Route exact path="/Upsolver" component={Upsolver} />
         <Route exact path="/Vizualizer" component={Vizualizer} />
+        <Route exact path="/Temporary" component={Temporary} />
         
 
         {/* <Route exact path="/dashboard" component={() => 

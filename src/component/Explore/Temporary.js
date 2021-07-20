@@ -7,7 +7,7 @@ import solvedProblems from '../Data/SolvedData';
 // item.id = A , B ..
 // content = Question
 
-const Recommender = () =>{
+const Temporary = () =>{
 
     const [data , setData] = useState([]);
   
@@ -29,7 +29,7 @@ const Recommender = () =>{
                 const F = [];
                 const G = [];
                 const H = [];
-/*
+
                 const R800 = [];
                 const R900 = [];
                 const R1000 = [];
@@ -55,7 +55,7 @@ const Recommender = () =>{
                 const R3000 = [];
                 const R3100 = [];
                 const R3200 = [];
-*/
+
                 if(tmpData.status==="OK")
                 {
                     tmpData.result.problems.map(item=>{
@@ -74,7 +74,7 @@ const Recommender = () =>{
                             else if(item.index==="H") H.push(item);
 
                         // console.log(item.rating);
-                   /*         if(item.rating===800) R800.push(item);
+                            if(item.rating===800) R800.push(item);
                             else if(item.rating==="900") R900.push(item);
                             else if(item.rating==="1000") R1000.push(item);
                             else if(item.rating==="1100") R1100.push(item);
@@ -100,7 +100,7 @@ const Recommender = () =>{
                             else if(item.rating==="3100") R3100.push(item);
                             else if(item.rating==="3200") R3200.push(item);
                             
-                    */
+
 
                         }
                     });
@@ -109,8 +109,8 @@ const Recommender = () =>{
                     alert("something went wrong check your handle");
                 }
 
-                const index = Math.floor(Math.random()*10);
-             //   console.log(R2900);
+                const index = Math.floor(Math.random()*50);
+                console.log(index);
 
                 const Tempo = [];
                 
@@ -123,35 +123,8 @@ const Recommender = () =>{
                 Tempo.push({id:"G",content:G[index]});
                 Tempo.push({id:"H",content:H[index]});
 
-      /*          Tempo.push({id:"800",content:R800[index]});
-                Tempo.push({id:"900",content:R900[index]});
-                Tempo.push({id:"1000",content:R1000[index]});
-                Tempo.push({id:"1100",content:R1100[index]});
-                Tempo.push({id:"1200",content:R1200[index]});
-                Tempo.push({id:"1300",content:R1300[index]});
-                Tempo.push({id:"1400",content:R1400[index]});
-                Tempo.push({id:"1500",content:R1500[index]});
-                Tempo.push({id:"1600",content:R1600[index]});
-                Tempo.push({id:"1700",content:R1700[index]});
-                Tempo.push({id:"1800",content:R1800[index]});
-                Tempo.push({id:"1900",content:R1900[index]});
-                Tempo.push({id:"2000",content:R2000[index]});
-                Tempo.push({id:"2100",content:R2100[index]});
-                Tempo.push({id:"2200",content:R2200[index]});
-                Tempo.push({id:"2300",content:R2300[index]});
-                Tempo.push({id:"2400",content:R2400[index]});
-                Tempo.push({id:"2500",content:R2500[index]});
-                Tempo.push({id:"2600",content:R2600[index]});
-                Tempo.push({id:"2700",content:R2700[index]});
-                Tempo.push({id:"2800",content:R2800[index]});
-                Tempo.push({id:"2900",content:R2900[index]});
-                Tempo.push({id:"3000",content:R3000[index]});
-                Tempo.push({id:"3100",content:R3100[index]});
-                Tempo.push({id:"3200",content:R3200[index]});
-                
-
-*/
                 setData(Tempo);
+                
 
             }catch (error) {
               console.log("error", error);
@@ -166,15 +139,15 @@ const Recommender = () =>{
     return (
         <div className="Upsolver">
             <div className="container">
-            <h1 style={{ pading: '20px 20px', textAlign: 'center' }}>Recommender and Random</h1>
-                <p style={{ color: "white", pading: '20px 20px', textAlign: 'center' }}>Accept the challenge</p>
-                <h2 style={{ color: "white", pading: '20px 20px', textAlign: 'center' }}>practice hard grow hard </h2>
+            <h1 style={{ pading: '20px 20px', textAlign: 'center' }}>Temporary</h1>
+                <p style={{ color: "white", pading: '20px 20px', textAlign: 'center' }}>Temporary js</p>
+                <h2 style={{ color: "white", pading: '20px 20px', textAlign: 'center' }}>Total not Accepted : 10</h2>
                 <div className="row">
                     {
                         data.map(item => {
                             return (
                                 <div className="col-lg-4 col-md-6 col-sm-12">
-                                    <Card key={item.id} name={"temp" + item.id} content={item.content} />
+                                    <Card name={"temp" + item.id} content={item.content} />
                                 </div>
                             );
                         })
@@ -186,5 +159,5 @@ const Recommender = () =>{
     );
 }
 
-export default Recommender;
+export default Temporary;
 
