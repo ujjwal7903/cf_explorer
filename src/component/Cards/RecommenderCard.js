@@ -3,8 +3,6 @@ import {Button,Modal} from 'react-bootstrap';
 
 
 
-// Modal not working
-// take the help of Mo-Cart app
 
 const Card = (props) => {
 
@@ -13,7 +11,9 @@ const Card = (props) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    console.log(props.content);
+   // console.log(props.content);
+
+    const Qlink = `https://codeforces.com/problemset/problem/${props.content.contestId}/${props.content.index}`;
 
     return (
         <>
@@ -28,16 +28,17 @@ const Card = (props) => {
           </Modal.Header>
           <Modal.Body>
               <div className="container">
-                <div style={{display:'flex'}}>
-                  <h2> {" "+props.content.index} </h2>
-                  <h2> <span style={{color:'crimson'}} > {" "+props.content.name}</span></h2>
+                <div className="justify-content-center" style={{display:'flex',textAlign:'center',marginLeft:'auto'}}>
+                  <h2 style={{paddingLeft:'10px'}} > {props.content.index + "."} </h2>
+                  <h2 style={{paddingLeft:'10px'}} > <span style={{color:'crimson'}} >{props.content.name}</span></h2>
                 </div>
-                <button 
-                    className="btn btn-dark"
-                    style={{marginTop:'40px',width:'200px',height:'40px',fontSize:'20px'}}
+                <div className="justify-content-center" style={{display:'flex',textAlign:'center',marginLeft:'auto'}}>
+                <a href={Qlink} target="_blank" ><button 
+                    className="btn btn-info"
+                    style={{marginTop:'30px',width:'200px',height:'45px',fontSize:'20px'}}
                 >
                 Accept Challenge
-                </button>
+                </button></a></div>
               </div>
           </Modal.Body>
           <Modal.Footer>
