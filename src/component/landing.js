@@ -46,7 +46,7 @@ const Landing = () =>{
 
     return(
         <div className="landing-page fluid-container" >
-            <h1>Welcome To CF_explorer</h1>
+            <h1>Welcome To CF-explorer</h1>
             <h2>Explore the Tools! <span style={{color:'InfoBackground'}}> Enjoy the Game :)</span> </h2>
            <div className="container landing-card">
                 <input 

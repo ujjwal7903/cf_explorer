@@ -16,8 +16,8 @@ export const data = [
     },
     {
         "_id":"4",
-        "name":"Compare",
-        "link":"/Compare"
+        "name":"Recommender",
+        "link":"/Recommender"
     },
     {
         "_id":"5",
@@ -26,7 +26,7 @@ export const data = [
     },
     {
         "_id":"6",
-        "name":"Recommender",
-        "link":"/Recommender"
+        "name":"Compare",
+        "link":"/Compare"
     } 
  ];

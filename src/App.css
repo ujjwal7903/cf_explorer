@@ -6,13 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Tourney:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-h1{
-    font-family: 'Tourney', cursive;
-}
+h1{ font-family: 'Tourney', cursive; }
 
-h2{
-    font-family: 'Righteous', cursive;
-}
+h2{ font-family: 'Righteous', cursive; }
 
 .user-btn{
     position: absolute;
@@ -32,23 +28,24 @@ h2{
     background-attachment: fixed;
     background-size: 100% 100%;
     height: 100vh;
-    padding-top:100px;
+    padding-top:6rem;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
 .landing-card{
-    height: 400px;
-    width: 600px !important;
+    height: 25rem;
+    width: 45rem !important;
     background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba(34, 31, 31, 0.37);
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    padding:100px;
+    box-shadow: 0 0.08rem 2.4rem 0 rgba(34, 31, 31, 0.37);
+    backdrop-filter: blur( 0.04rem );
+    -webkit-backdrop-filter: blur( 0.04rem );
+    border-radius: 1.5rem;
+    border: 0.1rem solid rgba( 255, 255, 255, 0.18 );
+    padding:7rem;
 }
+
 
 .td_style{
     text-decoration: none;
@@ -67,16 +64,67 @@ h2{
 }
 
 .user-name{
-    padding: 10px;
-    border-radius: 10px;
+    padding: 0.8rem;
+    border-radius: 1rem;
     background: transparent;
     color: white;
-    width: 400px;
-    border:6px solid #fde7eb;
+    width: 28rem;
+    border:0.5rem solid #fde7eb;
+}
+
+@media screen and (max-width: 1200px) {
+    h1{ height: 5rem; }
+    h2{ height: 3rem; }
+    .landing-card{
+        height: 22rem;
+    }
+}
+@media screen and (max-width: 868px) {
+    .landing-card{
+        padding: 6rem;
+        height: 20rem;
+        width: 40rem !important;
+    }
+    .user-name{ width: 25rem; }
+}
+@media screen and (max-width: 768px) {
+    .landing-card{
+        padding: 4rem;
+        height: 18rem;
+        width: 32rem !important;
+    }
+    .user-name{ width: 22rem; }
+}
+@media screen and (max-width: 486px) {
+    .landing-card{
+        padding: 2rem;
+        height: 15rem;
+        width: 25rem !important;
+    }
+    .user-name{ width: 18rem; border:0.3rem solid #fde7eb; }
+}
+@media screen and (max-width: 375px) {
+    h1{ height: 7rem; }
+    h2{ height: 4rem; }
+    .landing-card{
+        padding: 2rem;
+        height: 15rem;
+        width: 18rem !important;
+    }
+    .user-name{ width: 12rem; border:0.3rem solid #fde7eb; }
+    .landing-page{ height: 120vh; }
+}
+
+.dashboard{
+    background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(60, 255, 1)); 
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: 100% 100%;  
+    height: 120vh;
 }
 
 .dash-card{
-    height: 20rem;
+    height: 18rem;
     width: 20rem;
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 0.8rem 2.4rem 0 rgba(36, 31, 31, 0.37);
@@ -112,6 +160,41 @@ h2{
     transform: skewX(45deg) translateX(300%);
     
 }
+
+/* Responsiveness starts here */
+
+@media screen and (max-width: 1200px) {
+    .dash-card{
+        width: 19rem;
+    }
+}
+@media screen and (max-width: 868px) {
+    .dash-card{
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dash-card{
+        width: 30rem;
+    }
+    .dash-card:hover{
+        letter-spacing: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 486px) {
+    .dash-card{
+        width: 22rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .dash-card{
+        width: 18rem;
+    }
+}
+
 /* small Dash Card starts here */
 
 .small-dash-card{
@@ -170,18 +253,10 @@ h2{
     .small-dash-card:hover{
         letter-spacing: 0.5rem;
     }
-    .dash-card{
-        width: 30rem;
-        height: 10rem;
-        padding-top: 3rem;
-    }
 }
 
 @media screen and (max-width: 486px) {
     .small-dash-card{
-        width: 22rem;
-    }
-    .dash-card{
         width: 22rem;
     }
 }
@@ -190,24 +265,11 @@ h2{
     .small-dash-card{
         width: 18rem;
     }
-    .dash-card{
-        width: 18rem;
-        height: 8rem;
-        padding-top: 2.25rem;
-    }
 }
 
 /* Responsiveness ends here */
 
 /* small Dash Card ends here */
-.dashboard{
-    background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(60, 255, 1)); 
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    background-size: 100% 100%;  
-    height: 100vh;
-
-}
 
 h1{
     color: white;
