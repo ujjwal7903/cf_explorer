@@ -115,45 +115,45 @@ const Recommender = () => {
                     alert("something went wrong check your handle");
                 }
 
-                const index = Math.floor(Math.random() * 10);
+                const index = Math.floor(Math.random() * 100);
                 //   console.log(R2900);
 
                 const Tempo = [];
 
-                Tempo.push({ id: "A", content: A[index] });
-                Tempo.push({ id: "B", content: B[index] });
-                Tempo.push({ id: "C", content: C[index] });
-                Tempo.push({ id: "D", content: D[index] });
-                Tempo.push({ id: "E", content: E[index] });
-                Tempo.push({ id: "F", content: F[index] });
-                Tempo.push({ id: "G", content: G[index] });
-                Tempo.push({ id: "H", content: H[index] });
+                Tempo.push({ id: "A", content: A[index%A.length] });
+                Tempo.push({ id: "B", content: B[index%B.length] });
+                Tempo.push({ id: "C", content: C[index%C.length] });
+                Tempo.push({ id: "D", content: D[index%D.length] });
+                Tempo.push({ id: "E", content: E[index%E.length] });
+                Tempo.push({ id: "F", content: F[index%F.length] });
+                Tempo.push({ id: "G", content: G[index%G.length] });
+                Tempo.push({ id: "H", content: H[index%H.length] });
 
-                Tempo.push({ id: 800, content: R800[index] });
-                Tempo.push({ id: 900, content: R900[index] });
-                Tempo.push({ id: 1000, content: R1000[index] });
-                Tempo.push({ id: 1100, content: R1100[index] });
-                Tempo.push({ id: 1200, content: R1200[index] });
-                Tempo.push({ id: 1300, content: R1300[index] });
-                Tempo.push({ id: 1400, content: R1400[index] });
-                Tempo.push({ id: 1500, content: R1500[index] });
-                Tempo.push({ id: 1600, content: R1600[index] });
-                Tempo.push({ id: 1700, content: R1700[index] });
-                Tempo.push({ id: 1800, content: R1800[index] });
-                Tempo.push({ id: 1900, content: R1900[index] });
-                Tempo.push({ id: 2000, content: R2000[index] });
-                Tempo.push({ id: 2100, content: R2100[index] });
-                Tempo.push({ id: 2200, content: R2200[index] });
-                Tempo.push({ id: 2300, content: R2300[index] });
-                Tempo.push({ id: 2400, content: R2400[index] });
-                Tempo.push({ id: 2500, content: R2500[index] });
-                Tempo.push({ id: 2600, content: R2600[index] });
-                Tempo.push({ id: 2700, content: R2700[index] });
-                Tempo.push({ id: 2800, content: R2800[index] });
-                Tempo.push({ id: 2900, content: R2900[index] });
-                Tempo.push({ id: 3000, content: R3000[index] });
-                Tempo.push({ id: 3100, content: R3100[index] });
-                Tempo.push({ id: 3200, content: R3200[index] });
+                Tempo.push({ id: 800, content: R800[index%R800.length] });
+                Tempo.push({ id: 900, content: R900[index%R900.length] });
+                Tempo.push({ id: 1000, content: R1000[index%R1000.length] });
+                Tempo.push({ id: 1100, content: R1100[index%R1100.length] });
+                Tempo.push({ id: 1200, content: R1200[index%R1200.length] });
+                Tempo.push({ id: 1300, content: R1300[index%R1300.length] });
+                Tempo.push({ id: 1400, content: R1400[index%R1400.length] });
+                Tempo.push({ id: 1500, content: R1500[index%R1500.length] });
+                Tempo.push({ id: 1600, content: R1600[index%R1600.length] });
+                Tempo.push({ id: 1700, content: R1700[index%R1700.length] });
+                Tempo.push({ id: 1800, content: R1800[index%R1800.length] });
+                Tempo.push({ id: 1900, content: R1900[index%R1900.length] });
+                Tempo.push({ id: 2000, content: R2000[index%R2000.length] });
+                Tempo.push({ id: 2100, content: R2100[index%R2100.length] });
+                Tempo.push({ id: 2200, content: R2200[index%R2200.length] });
+                Tempo.push({ id: 2300, content: R2300[index%R2300.length] });
+                Tempo.push({ id: 2400, content: R2400[index%R2400.length] });
+                Tempo.push({ id: 2500, content: R2500[index%R2500.length] });
+                Tempo.push({ id: 2600, content: R2600[index%R2600.length] });
+                Tempo.push({ id: 2700, content: R2700[index%R2700.length] });
+                Tempo.push({ id: 2800, content: R2800[index%R2800.length] });
+                Tempo.push({ id: 2900, content: R2900[index%R2900.length] });
+                Tempo.push({ id: 3000, content: R3000[index%R3000.length] });
+                Tempo.push({ id: 3100, content: R3100[index%R3100.length] });
+                Tempo.push({ id: 3200, content: R3200[index%R3200.length] });
 
 
 
