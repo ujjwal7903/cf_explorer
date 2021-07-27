@@ -215,19 +215,19 @@ const Vizualizer = () => {
             </div>
 
             <div style={{paddingTop:'20px',paddingBottom:'10px'}}>
-                <h2 style={{color:'white',textAlign:'center'}}>Rating of umang_us</h2>
+                <h2 style={{color:'white',textAlign:'center'}}>Rating of {handle}</h2>
                 <RatingChart data={rating} labels={ratingLable} />
             </div>
             <div style={{paddingTop:'20px',paddingBottom:'10px'}}>
-                <h2 style={{color:'white',textAlign:'center'}}>Tags of umang_us</h2>
+                <h2 style={{color:'white',textAlign:'center'}}>Tags of {handle}</h2>
                 <SolvedTagsCharts data={solvedTags} labels={solvedTagsLabel} />
             </div>
             <div style={{paddingTop:'20px',paddingBottom:'10px'}}>
-                <h2 style={{color:'white',textAlign:'center'}}>Levels of umang_us</h2>
+                <h2 style={{color:'white',textAlign:'center'}}>Levels of {handle}</h2>
                 <SolvedLevelBar data={solvedLevels} labels={solvedLevelsLabel} />
             </div>
             <div style={{paddingTop:'20px',paddingBottom:'10px'}}>
-                <h2 style={{color:'white',textAlign:'center'}}>Problem Rating of umang_us</h2>
+                <h2 style={{color:'white',textAlign:'center'}}>Problem Rating of {handle}</h2>
                 <SolvedRatingChart data={solvedRatings} labels={solvedRatingsLabel} />
             </div>
         </div>
