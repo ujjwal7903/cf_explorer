@@ -11,7 +11,7 @@ const Landing = () =>{
         {
             history.push("/dashboard");
         }
-    },[]);
+    });
 
 
     const login = () =>{

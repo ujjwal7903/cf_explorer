@@ -27,7 +27,7 @@ const Recommender = () => {
             try {
                 const response = await fetch(url);
                 const tmpData = await response.json();
-                console.log(tmpData);
+             //   console.log(tmpData);
 
                 const A = [];  // A not done
                 const B = [];

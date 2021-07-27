@@ -4,6 +4,8 @@ import Card from '../Cards/RecommenderCard';
 import solvedProblems from '../Data/SolvedData';
 
 
+// useEffect fix karna hai
+
 
 // item.id = A , B ..
 // content = Question

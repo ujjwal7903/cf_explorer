@@ -116,7 +116,7 @@ h2{ font-family: 'Righteous', cursive; }
 }
 
 .dashboard{
-    background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(60, 255, 1)); 
+  /*  background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(60, 255, 1)); */
     background-repeat: no-repeat;
     background-attachment:fixed;
     background-size: 100% 100%;  
@@ -292,29 +292,29 @@ h1{
 }
 
 .Upsolver{
-    background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(250, 81, 118)); 
+ /*   background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(250, 81, 118)); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;   
 }
 
 .Recommender{
-    background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(245, 112, 4)); 
-    background-repeat: no-repeat;
+   /* background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(245, 112, 4)); 
+ */   background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;   
 }
 
 .virtualContest{
-    background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(245, 112, 4)); 
-
+  /*  background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(245, 112, 4)); 
+*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;   
 }
 
 .Ladder{
-    background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(4, 245, 173));   
+  /*  background: linear-gradient(to bottom right,rgb(8, 4, 255), rgb(4, 245, 173));   */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;   
@@ -392,3 +392,9 @@ h1{
 	right: 0;
 	background: #fd9a3f;
 }
+
+
+/*--------------------vizualizer------------------------*/
+
+
+
