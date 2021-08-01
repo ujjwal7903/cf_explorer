@@ -1,10 +1,10 @@
 import { React } from "react";
 
-const Compare = () => {
+const Cfbot = () => {
     console.log("compare");
     return (
         <h2>Compare</h2>
     );
 }
 
-export default Compare;
+export default Cfbot;

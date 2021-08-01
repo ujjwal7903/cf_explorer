@@ -26,7 +26,7 @@ export const data = [
     },
     {
         "_id":"6",
-        "name":"Compare",
-        "link":"/Compare"
+        "name":"CF-bot",
+        "link":"/Cfbot"
     } 
  ];
