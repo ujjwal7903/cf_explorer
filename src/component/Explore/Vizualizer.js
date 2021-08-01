@@ -29,6 +29,9 @@ import { useHistory } from 'react-router-dom';
     "newRating": 1210
 }
 */
+
+// maxup maxdown remaining
+
 const handle = localStorage.getItem('user-name');
 
 const Vizualizer = () => {
@@ -44,6 +47,18 @@ const Vizualizer = () => {
 
     const [solvedRatings,setSolvedRatings]=useState([]);
     const [solvedRatingsLabel,setSolvedRatingsLabel]=useState([]);
+
+    const [BestRank , setBestRank] = useState(10000);
+    const [WorstRank , setWorstRank] = useState(0);
+    const [contestCount , setContestCount] = useState(0);
+    const [maxUp,setMaxUp] = useState(0);
+    const [maxDown , setMaxDown] = useState(0);
+
+    const [Tried,setTried] = useState(0);
+    const [solved,setSolved] = useState(0);
+
+    const [currRating , setCurrRating] = useState(0);
+    const [maxRating , setMaxRating] = useState(0);
 
 
     const history = useHistory();
@@ -64,19 +79,41 @@ const Vizualizer = () => {
         try{
             const response = await fetch("https://codeforces.com/api/user.rating?handle="+handle);
             const tmpData = await response.json();
-         //   console.log(tmpData);
+    ///        console.log(tmpData);
             
+
             if(tmpData.status=="OK")
             {
                 const ratingData=[];
                 const ratingDataLabel=[];
+                const best=0;
+                const worst=200300;
 
                 tmpData.result.map(item=>{
                     ratingData.push(item.newRating);
                     ratingDataLabel.push(item.contestId);
+                    const Rank = item.rank;
+                    
+                    if(best>Rank)
+                    {
+                        best = Rank;
+                    }
+                    if(worst<Rank)
+                    {
+                        worst = Rank;
+                    }
+                    
+
                 })
                 setRating(ratingData);
                 setRatingLable(ratingDataLabel);
+                setWorstRank(worst);
+                setContestCount(ratingDataLabel.length);
+
+           //     console.log(BestRank);
+            //    console.log(WorstRank);
+                    console.log(maxUp);
+                    console.log(maxDown);
             }
 
         }
@@ -92,6 +129,7 @@ const Vizualizer = () => {
       //  console.log(tmpData);
 
         const solvedSet = new Set();
+        const TriedSet =  new Set();
         
         const TagMap = new Map();
         const RatingMap = new Map();
@@ -104,15 +142,18 @@ const Vizualizer = () => {
       
                 const str = `${item.problem.contestId}${item.problem.index}`; 
                 str.toString();
+                TriedSet.add(str);
                 if(!solvedSet.has(str))
                 {
-                    if (item.verdict === "OK") {
+                    if(item.verdict === "OK") {
 
                         // get the data from here
                        // console.log(item);
                         const index = item.problem.index;
                         const tags = item.problem.tags;
                         const problemRating = parseInt(item.problem.rating);
+
+                        
 
                         // --------- ---tags -----------
                         tags.map(tag=>{
@@ -184,6 +225,7 @@ const Vizualizer = () => {
         });
         setSolvedLevels(LevelData);
         setSolvedLevelsLabel(LevelLable);
+        console.log(LevelLable);
 
         //-----------------Rating ------------------------------
             //  console.log(RatingMap);
@@ -199,18 +241,31 @@ const Vizualizer = () => {
 
         setSolvedRatings(RatingData);
         setSolvedRatingsLabel(RatingLable);
+
+        const solvedQues = solvedSet.size;
+        setSolved(solvedQues);
+
+        const TriedQues = TriedSet.size;
+        setTried(TriedQues);
+
+        
+
     }
 
 
     return (
         <div className="container vizualizer">
             <h1 style={{textAlign:'center'}}>Vizualizer</h1>
+            <div className="justify-content-center" style={{display:'flex'}}>
+            <h2 style={{color:'white' , padding:'20px'}}>Max Rating: 1700</h2>
+            <h2  style={{color:'white',padding:'20px'}}>Current Rating: 1600</h2>
+            </div>
             <div className="row">
                 <div className="col-6">
-                    <QuestionCount />
+                    <QuestionCount tried={Tried} solved={solved} />
                 </div>
                 <div className="col-6">
-                    <ContestCount />
+                    <ContestCount count={contestCount} bestRank={BestRank} worstRank={WorstRank} />
                 </div>
             </div>
 
