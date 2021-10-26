@@ -30,7 +30,7 @@ const Landing = () =>{
             if(data.status === "OK")
             {
                 localStorage.setItem('user-name',handle);
-               // const temp = localStorage.getItem('user-name');
+                window.location.reload(); 
                 history.push("/dashboard");   
             }
             else{

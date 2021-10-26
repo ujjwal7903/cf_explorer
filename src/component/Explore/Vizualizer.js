@@ -60,6 +60,7 @@ const Vizualizer = () => {
     const [currRating , setCurrRating] = useState(0);
     const [maxRating , setMaxRating] = useState(0);
 
+    const [userHandle , setUserHandle] = useState("");
 
     const history = useHistory();
 
@@ -69,6 +70,7 @@ const Vizualizer = () => {
         {
             history.push("/");
         }
+
 
         fetchRating();
         fetchProblems();

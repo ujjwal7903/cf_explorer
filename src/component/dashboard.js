@@ -7,7 +7,7 @@ const Dashboard = () =>{
 
     return(
         <div className="dashboard">
-            <User />
+            <User />;
             <div className="container" >
             <h1 style={{textAlign: 'center'}}>CODE LIKE BEAST</h1>
             <div className="row">
