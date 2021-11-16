@@ -116,6 +116,13 @@ const Vizualizer = () => {
             //    console.log(WorstRank);
                     console.log(maxUp);
                     console.log(maxDown);
+
+                ratingData.map(x=>{
+                    setCurrRating(x);
+                })
+
+                setMaxRating(Math.max(...ratingData));
+
             }
 
         }
@@ -259,16 +266,15 @@ const Vizualizer = () => {
         <div className="container vizualizer">
             <h1 style={{textAlign:'center'}}>Vizualizer</h1>
             <div className="justify-content-center" style={{display:'flex'}}>
-            <h2 style={{color:'white' , padding:'20px'}}>Max Rating: 1700</h2>
-            <h2  style={{color:'white',padding:'20px'}}>Current Rating: 1600</h2>
+            <h2 style={{color:'white' , padding:'20px'}}>Max Rating: {maxRating}</h2>
+            <h2  style={{color:'white',padding:'20px'}}>Current Rating: {currRating}</h2>
             </div>
             <div className="row">
-                <div className="col-6">
+              
+                <div className="col">
                     <QuestionCount tried={Tried} solved={solved} />
                 </div>
-                <div className="col-6">
-                    <ContestCount count={contestCount} bestRank={BestRank} worstRank={WorstRank} />
-                </div>
+              
             </div>
 
             <div style={{paddingTop:'20px',paddingBottom:'10px'}}>

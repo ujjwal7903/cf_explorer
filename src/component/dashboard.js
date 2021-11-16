@@ -9,7 +9,7 @@ const Dashboard = () =>{
         <div className="dashboard">
             <User />;
             <div className="container" >
-            <h1 style={{textAlign: 'center'}}>CODE LIKE BEAST</h1>
+            <h1 style={{textAlign: 'center'}}>CODE MODE ON</h1>
             <div className="row">
                {
                    data.map(item =>{
